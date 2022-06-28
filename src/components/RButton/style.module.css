@@ -1,0 +1,48 @@
+.button {
+  padding: 12px 48px;
+  border-radius: 5px;
+  color: #333333;
+  background: white;
+  font-size: 15px;
+  font-weight: 500;
+  outline: none;
+
+  border-color: transparent;
+}
+
+.red {
+  color: white;
+  background-color: red;
+}
+
+.red {
+  color: white;
+  background-color: red;
+}
+
+.blue {
+  color: white;
+  background: #0076ff;
+}
+
+.green {
+  color: white;
+  background: green;
+}
+
+.outline {
+  background: none;
+
+  color: #0076ff;
+  border: 1px solid #0076ff;
+}
+
+.red.outline {
+  color: red;
+  border: 1px solid red;
+}
+
+.green.outline {
+  color: green;
+  border: 1px solid green;
+}

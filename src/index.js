@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// import { BrowserRouter, HashRouter as Router} from "react-router-dom";
+// import { renderRoutes } from 'react-router-config'
+// import routes from './router/index.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    {/* <Router>
+      {renderRoutes(routes)}
+    </Router> */}
   </React.StrictMode>
 );
 

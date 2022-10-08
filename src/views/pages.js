@@ -1,9 +1,18 @@
-import { renderRoutes } from 'react-router-config'
+// import { renderRoutes } from 'react-router-config'
+import { routes } from '../router/index.js'
 
-export function Home ({ route }) {
-  return (<> 
-    {renderRoutes(route.routes)}
-  </>)
+export function Home () {
+  // return <h1>Home</h1>
+  return routes.map((route, i) => (
+    // <RouteWithSubRoutes key={i} {...route} />
+    // <NavLink to={route.path} key={route.path}>{route.label}</NavLink>
+    <button 
+      key={route.path} 
+      onClick={ ()=> console.log(route.path) }
+      >
+    {route.label}
+    </button>
+  ));
 }
 
 export function About() {
@@ -14,8 +23,8 @@ export function Unknown() {
   return <h1>Unknown</h1>
 }
 
-export function Electronics() {
-  return <h1>Electronics</h1>
+export function Mall() {
+  return <h1>Mall</h1>
 }
 
 export function Mobile() {

@@ -1,63 +1,69 @@
-// import React from 'react'
+// import React from 'react';
 // import { RouteConfig } from 'react-router-config';
 // import { useRoutes } from 'react-router-config';
-
-import { useRoutes } from 'react-router-dom';
+// import { useRoutes } from 'react-router-dom';
+// import {Route} from 'react-router-dom';
 
 import {
-  Home, About, Unknown, Electronics,  Mobile, Desktop,  Laptop
-} from '../views/pages.js'
-import Root from '../App.js'
+  Mall,  Mobile, Desktop,  Laptop
+} from '../views/pages.js';
 
-const routes = [
+import Home from '../views/home';
+import About from '../views/about';
+import Unknown from '../views/unknown';
+
+// import Root from '../App.js'
+
+export const routes = [
   {
-    component: Root,
+    path: '/',
+    label: '首页',
+    exact: true,
+    component: Home,
+  },
+  {
+    path: '/about',
+    label: '关于',
+    exact: true,
+    component: About
+  },
+  {
+    path: '/unknown',
+    label: '404',
+    component: Unknown
+  },
+  {
+    path: '/mall',
+    label: '商城',
+    component: Mall,
     routes: [
       {
-        path: '/',
-        label: '首页',
-        exact: true,
-        component: Home
+        path: '/mall/mobile',
+        label: '移动',
+        component: Mobile
       },
       {
-        path: '/about',
-        label: '关于',
-        exact: true,
-        component: About
+        path: '/mall/desktop',
+        label: '桌面',
+        component: Desktop
       },
       {
-        path: '/unknown',
-        label: '书籍',
-        component: Unknown
-      },
-      {
-        path: '/elec',
-        label: '商城',
-        component: Electronics,
-        routes: [
-          {
-            path: '/elec/mobile',
-            label: '移动',
-            component: Mobile
-          },
-          {
-            path: '/elec/desktop',
-            label: '桌面',
-            component: Desktop
-          },
-          {
-            path: '/elec/laptop',
-            label: '笔记本',
-            component: Laptop
-          }
-        ]
+        path: '/mall/laptop',
+        label: '笔记本',
+        component: Laptop
       }
     ]
   }
 ];
 
-// const routes = () => {
-//   return useRoutes(routes);
+// export const RouteWithSubRoutes = (route) => {
+// 	return (
+// 		<Route
+// 			path={route.path}
+// 			render={props => (
+// 				// pass the sub-routes down to keep nesting
+// 				<route.component {...props} routes={route} />
+// 			)}
+// 		/>
+// 	)
 // }
-
-export default routes;

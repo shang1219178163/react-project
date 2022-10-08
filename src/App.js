@@ -51,13 +51,9 @@
 // export default App;
 
 
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import { renderRoutes } from "react-router-config";
-import routes from './router/index.js'
+import { routes, } from './router/index.js'
 
-function App() {
-  return <Router>{renderRoutes(routes)}</Router>;
+export default function App() {
+  return renderRoutes(routes)
 }
-
-export default App;
